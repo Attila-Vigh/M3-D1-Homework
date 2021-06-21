@@ -350,4 +350,11 @@ const arrayOfNumbers14 = [ 2, 334, 457, 54, 65, 0, -12]
 
 console.log( gratestEvenInArray2(arrayOfNumbers14) );
 
+// 15) Create a function to check from two given integers, whether one is positive and another one is negative.
 
+const checkIfOnePosOtherNeg = ( a, b ) => ( a < 0 && b > 0) || ( b < 0 && a > 0) ? true : false 
+
+console.log( checkIfOnePosOtherNeg(  1, 2) )
+console.log( checkIfOnePosOtherNeg( -1, 2) )
+console.log( checkIfOnePosOtherNeg(  1,-2) )
+console.log( checkIfOnePosOtherNeg( -1,-2) )
