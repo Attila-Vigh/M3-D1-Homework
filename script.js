@@ -376,3 +376,17 @@ const first3Upper = string =>
 
 const string16 = "Just throw some complex hints at me"
 console.log( first3Upper( string16 ));
+
+// 17) Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+
+const calculateIfInRangeOf = ( a, b) => 
+    (a + b) >= 50 && (a + b) <= 80  
+        ? 65 
+        : 80
+
+console.log( calculateIfInRangeOf( 50, 0) );
+console.log( calculateIfInRangeOf( 51, 0) );
+console.log( calculateIfInRangeOf( 79, 0) );
+console.log( calculateIfInRangeOf( 80, 0) );
+console.log( calculateIfInRangeOf( 49, 0) );
+console.log( calculateIfInRangeOf( 81, 0) );
