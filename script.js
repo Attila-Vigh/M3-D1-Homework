@@ -46,22 +46,49 @@ console.log(  extractChPosistion( string) );
 
 const largestOf3Integers = ( a, b, c) => {
     
-        if ( parseInt( a ) === NaN || parseInt( b ) === NaN || parseInt( c ) === NaN )
-            return "A valid integer has to be introduced."
-        else if ( a >= b && a >= c)
-            return a
-        else if ( b >= a && b >= c)
-            return b
-        else if ( c >= b && c >= a)
-            return c
-        // else
+    if ( parseInt( a ) === NaN || parseInt( b ) === NaN || parseInt( c ) === NaN )
+    return "A valid integer has to be introduced."
+    else if ( a >= b && a >= c)
+    return a
+    else if ( b >= a && b >= c)
+    return b
+    else if ( c >= b && c >= a)
+    return c
+    // else
+}
+const largestOf3Integers2 = ( ...arg ) => Math.max( ...arg )
+
+console.log( largestOf3Integers2( "a", 1, 2) );
+console.log( largestOf3Integers2( 1, 2, 3) );
+console.log( largestOf3Integers2( 3, 1, 2) );
+console.log( largestOf3Integers2( 3, 4, 2) );
+console.log( largestOf3Integers2( 3, 3, 3) );
+console.log( largestOf3Integers2( -1, 3, 3) );
+console.log( largestOf3Integers2( 0, 3, 3) );
+
+// 5) Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+
+const checkIfInRange = (a,b) => {
+    if ( a <= 60 && 
+         b <= 60 &&  
+         a >= 40 && 
+         b >= 40  )
+        return `${a} and ${b} are in range of 40..60` 
+    else if ( 
+        a >= 70 && 
+        b >= 70 && 
+        a <= 100&& 
+        b <= 100 )
+        return `${a} and ${b} are in range of 70..100`
+    else
+
+    return `${a} and ${b} are not in the rage of 40..60 or 70..100`
 }
 
-console.log( largestOf3Integers( "a", 1, 2) );
-console.log( largestOf3Integers( 1, 2, 3) );
-console.log( largestOf3Integers( 3, 1, 2) );
-console.log( largestOf3Integers( 3, 4, 2) );
-console.log( largestOf3Integers( 3, 3, 3) );
-console.log( largestOf3Integers( -1, 3, 3) );
-console.log( largestOf3Integers( 0, 3, 3) );
+console.log( checkIfInRange( 42, 56) );
+console.log( checkIfInRange( 40, 60) );
+console.log( checkIfInRange( 70, 100) );
+console.log( checkIfInRange( 64, 66) );
+console.log( checkIfInRange( 39, 56) );
+console.log( checkIfInRange( 42, 101) );
 
