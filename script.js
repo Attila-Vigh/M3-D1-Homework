@@ -344,7 +344,19 @@ const gratestEvenInArray2 = ( arrayOfNumbers14) => {
                 gratesNumber = number
     return gratesNumber
 } 
+console.log( "--------------------------------------------------------------------------------------------------------");
+const gratestEvenInArray3 = arrayOfNumbers14 => arrayOfNumbers14.reduce( 
+    ( acc, num ) => 
+        num%2 === 0 
+            ? acc = acc > num 
+                ? acc 
+                : acc = num 
+            : acc
+)
 
+const arrayOfNumbers14 = [ 2, 334, 457, 5644, 54, 65, 0, -12]
+
+console.log( gratestEvenInArray3(arrayOfNumbers14) );
 
 // 15) Create a function to check from two given integers, whether one is positive and another one is negative.
 
