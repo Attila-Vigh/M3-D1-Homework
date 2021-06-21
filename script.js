@@ -92,3 +92,23 @@ console.log( checkIfInRange( 64, 66) );
 console.log( checkIfInRange( 39, 56) );
 console.log( checkIfInRange( 42, 101) );
 
+// 6) Create a function to create a new string of specified copies (positive number) of a given string.
+
+const copyString1 = ( string, copies) => {
+    if ( copies > 0 ) {
+        let newString = ""
+        for (let i = 0; i < copies; i++) 
+            newString += string ;
+        
+        return newString
+    }
+    else
+        return "No songs for you!"
+}
+//! if NO "|| copies === 0" added console.log will return nothing 
+const copyString2 = ( string, copies) => copies < 0 || copies === 0 ? "NO songs for you!" : string.repeat(copies)
+
+console.log(copyString2("lalalalaaa!!!", 5));
+console.log(copyString2("lalalalaaa!!!", 0));
+console.log(copyString2("lalalalaaa!!!", -2));
+
