@@ -287,3 +287,38 @@ const array = [
     "Are mere strangers who'll never ever meet",
 ]
 console.log(  longestString(array) );
+
+/** 12) Create a function to find the types of a given angle.
+    * Types of angles:
+    *   Acute angle: An angle between 0 and 90 degrees.
+    *   Right angle: An 90 degree angle.
+    *   btuse angle: An angle between 90 and 180 degrees.
+    *   Straight angle: A 180 degree angle.  
+*/
+
+const checkTypeOfAngle = angle => {
+    if ( angle < 0 || angle > 180)
+        return `${ angle } is NOT a valid angle`
+    if( angle >= 0 && angle < 90 )
+        return `${ angle } is an Acute angle` 
+    if( angle === 90 )
+        return `${ angle } is a Right angle` 
+    if( angle > 90 && angle < 180 )
+        return `${ angle } is an obtuse angle` 
+    if( angle === 180 )
+        return `${ angle } is a Straight angle` 
+      
+}
+
+console.log(checkTypeOfAngle( -1 ));
+console.log(checkTypeOfAngle( 0 ));
+console.log(checkTypeOfAngle( 1 ));
+console.log(checkTypeOfAngle( 89 ));
+console.log(checkTypeOfAngle( 90 ));
+console.log(checkTypeOfAngle( 91 ));
+console.log(checkTypeOfAngle( 179 ));
+console.log(checkTypeOfAngle( 180 ));
+console.log(checkTypeOfAngle( 181 ));
+
+
+
