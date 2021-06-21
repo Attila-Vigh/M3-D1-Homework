@@ -182,17 +182,17 @@ const checkfor1an3IfInArray1 = arrayOfNumbers => {
 const checkfor1an3IfInArray2 = arrayOfNumbers => { 
     let has_1_or_3 = null
     if( arrayOfNumbers.length === 2 )
-    arrayOfNumbers.forEach( elem => {
-        if (elem === 1 || elem === 3)
-        return has_1_or_3 = "The array contains the numbers 1 and 3"
-        else
-        return has_1_or_3
-        })
-        else
-        return has_1_or_3
+        arrayOfNumbers.forEach( elem => {
+            if (elem === 1 || elem === 3)
+                return has_1_or_3 = "The array contains the numbers 1 and 3"
+            else
+                return has_1_or_3
+            })
+            else
+                return has_1_or_3
         
-        return has_1_or_3
-    }
+    return has_1_or_3
+}
     console.log( checkfor1an3IfInArray2([1,3]));
     console.log( checkfor1an3IfInArray2([1]));
     console.log( checkfor1an3IfInArray2([3]));
@@ -201,7 +201,6 @@ const checkfor1an3IfInArray2 = arrayOfNumbers => {
     console.log( checkfor1an3IfInArray2([1,"three"]));
     
     // 10) Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
-    console.log( "--------------------------------------------------------------------------------------------------------");
     
 const checkfor1an3IfNOTinArray1 = arrayOfNumbers => {
     if(arrayOfNumbers.length === 2 
@@ -346,9 +345,6 @@ const gratestEvenInArray2 = ( arrayOfNumbers14) => {
     return gratesNumber
 } 
 
-const arrayOfNumbers14 = [ 2, 334, 457, 54, 65, 0, -12]
-
-console.log( gratestEvenInArray2(arrayOfNumbers14) );
 
 // 15) Create a function to check from two given integers, whether one is positive and another one is negative.
 
@@ -358,3 +354,13 @@ console.log( checkIfOnePosOtherNeg(  1, 2) )
 console.log( checkIfOnePosOtherNeg( -1, 2) )
 console.log( checkIfOnePosOtherNeg(  1,-2) )
 console.log( checkIfOnePosOtherNeg( -1,-2) )
+
+// 16) Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+
+const first3Upper = string => 
+      string.substr(0, 3).toUpperCase() 
+    + string.substr(   3).toLowerCase()
+
+
+const string16 = "Just throw some complex hints at me"
+console.log( first3Upper( string16 ));
