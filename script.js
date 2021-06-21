@@ -390,3 +390,47 @@ console.log( calculateIfInRangeOf( 79, 0) );
 console.log( calculateIfInRangeOf( 80, 0) );
 console.log( calculateIfInRangeOf( 49, 0) );
 console.log( calculateIfInRangeOf( 81, 0) );
+
+/**
+    18) Create a function to convert a number to a string, the contents of which depend on the number's factors. 
+    Follow next example:
+        * If the number has 3 as a factor, output 'Diego'.
+        * If the number has 5 as a factor, output 'Riccardo'.
+        * If the number has 7 as a factor, output 'Stefano'.
+        * If the number does not have 3, 5, or 7 as a factor, just pass the number's digits straight through.
+
+    Examples
+        * 28's factors are 1, 2, 4, 7, 14, 28.
+        * this would be a simple "Stefano".
+        * 30's factors are 1, 2, 3, 5, 6, 10, 15, 30.
+        * this would be a "DiegoRiccardo".
+        * 34 has four factors: 1, 2, 17, and 34.
+        * this would be "34".
+ */
+
+const converNumToStr = num => {
+        let string = ""
+        if( num%3 === 0 ) string  = 'Diego' 
+        if( num%5 === 0 ) string += 'Riccardo' 
+        if( num%7 === 0 ) string += 'Stefano' 
+        
+        if (string === "")
+            return num
+        else
+            return string
+} 
+
+console.log( converNumToStr ( 1   ));
+console.log( converNumToStr ( 3   ));
+console.log( converNumToStr ( 5   ));
+console.log( converNumToStr ( 7   ));
+console.log( converNumToStr ( 15  ));
+console.log( converNumToStr ( 21  ));
+console.log( converNumToStr ( 28  ));
+console.log( converNumToStr ( 30  ));
+console.log( converNumToStr ( 105 ));
+console.log( converNumToStr ( 106 ));
+console.log( converNumToStr ( 11  ));
+console.log( converNumToStr ( 13  ));
+console.log( converNumToStr ( 23  ));
+
