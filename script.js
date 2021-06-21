@@ -332,8 +332,22 @@ const gratestInArray2 = ( arrayOfNumbers13) => {
     return gratesNumber
 } 
 
-
-
 const arrayOfNumbers13 = [ 2, 334, 54, 65, 0, -12]
 
 console.log( gratestInArray2(arrayOfNumbers13) );
+
+// 14) Create a function to get the largest even number from an array of integers.
+
+const gratestEvenInArray2 = ( arrayOfNumbers14) => {
+    let gratesNumber = 0
+        for (const number of arrayOfNumbers14 ) 
+            if ( number%2 === 0 && gratesNumber < number ) 
+                gratesNumber = number
+    return gratesNumber
+} 
+
+const arrayOfNumbers14 = [ 2, 334, 457, 54, 65, 0, -12]
+
+console.log( gratestEvenInArray2(arrayOfNumbers14) );
+
+
