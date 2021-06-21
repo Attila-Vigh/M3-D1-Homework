@@ -241,3 +241,49 @@ console.log( checkfor1an3IfNOTinArray1([2,3]));
 console.log( checkfor1an3IfNOTinArray1([2,4]));
 console.log( checkfor1an3IfNOTinArray1([1,"three"]));
 
+// 11) Create a function to find the longest string from a given array of strings.
+
+const longestString = arrayOfStrings => {
+    let longestString =""
+    for( let string of arrayOfStrings)
+        if( string.length > longestString.length )
+            longestString = string
+
+    return longestString
+} 
+
+const array = [
+    "Sparkling Dust Jul 2016",
+    "The Programmer and The Poetess",
+
+    "I love a programmer",
+    "He is always there making codes",
+    "On different ways in order",
+    "To show how much he loves you so",
+
+    "There are times when he would",
+    "Just throw some complex hints at me",
+    "With utmost best I could",
+    "Try to find the meaning and see",
+
+    "See that maybe I'm right",
+    "With the theory that I have made",
+    "And maybe, just maybe",
+    "My words rhyme with what's in your head",
+
+    "But sometimes I want to",
+    "Just let go and then erase it",
+    "Sometimes I want you to",
+    "Be brave enough to just admit",
+
+    "That I'm something to you",
+    "Not a computer you play with",
+    "That your feelings are true",
+    "There's no condition that you need",
+
+    "I am afraid to feel",
+    "The tragic end of a sonnet",
+    "Where two lovers for real",
+    "Are mere strangers who'll never ever meet",
+]
+console.log(  longestString(array) );
