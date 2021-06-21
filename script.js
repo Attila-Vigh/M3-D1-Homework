@@ -320,5 +320,20 @@ console.log(checkTypeOfAngle( 179 ));
 console.log(checkTypeOfAngle( 180 ));
 console.log(checkTypeOfAngle( 181 ));
 
+// 13) Create a function to find the index of the greatest element of a given array of integers
+
+const gratestInArray1 = ( arrayOfNumbers13) => Math.max(...arrayOfNumbers13) 
+
+const gratestInArray2 = ( arrayOfNumbers13) => {
+    let gratesNumber = 0
+        for (const number of arrayOfNumbers13 ) 
+            if ( gratesNumber < number ) 
+                gratesNumber = number
+    return gratesNumber
+} 
 
 
+
+const arrayOfNumbers13 = [ 2, 334, 54, 65, 0, -12]
+
+console.log( gratestInArray2(arrayOfNumbers13) );
