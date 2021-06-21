@@ -47,13 +47,13 @@ console.log(  extractChPosistion( string) );
 const largestOf3Integers = ( a, b, c) => {
     
     if ( parseInt( a ) === NaN || parseInt( b ) === NaN || parseInt( c ) === NaN )
-    return "A valid integer has to be introduced."
+        return "A valid integer has to be introduced."
     else if ( a >= b && a >= c)
-    return a
+        return a
     else if ( b >= a && b >= c)
-    return b
+        return b
     else if ( c >= b && c >= a)
-    return c
+        return c
     // else
 }
 const largestOf3Integers2 = ( ...arg ) => Math.max( ...arg )
@@ -112,3 +112,16 @@ console.log(copyString2("lalalalaaa!!!", 5));
 console.log(copyString2("lalalalaaa!!!", 0));
 console.log(copyString2("lalalalaaa!!!", -2));
 
+// 7) Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
+
+const displayCityName = (city ="")  => 
+    city.substr(0,3) === "Los" 
+    || city.substr(0,3) === "New"
+        ? city
+        : "blank" 
+
+console.log( displayCityName("Los Angeles"));
+console.log( displayCityName("New York"));
+console.log( displayCityName("Dallas"));
+console.log( displayCityName("London"));
+console.log( displayCityName());
