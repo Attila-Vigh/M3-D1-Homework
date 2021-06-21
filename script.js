@@ -18,14 +18,11 @@ console.log( checkTwoNumbersAre50(  5, 50));
 
 
 const extractChPosistion = ( string, position) => {
-    console.log("position: ", position);
-    if (position === undefined || position > string.length || position < -string.length) {
+    if (position === undefined || position > string.length || position < -string.length)
+        
         return " You have to introduce a valid number "
-    }
-    else {
+    else 
         return string.substr(0, position) + string.substr( position +1)
-    }
-
 }
 
 let string = "Hello world!"
@@ -44,3 +41,27 @@ console.log(  extractChPosistion( string, 11) );
 console.log(  extractChPosistion( string, string.length) );
 console.log(  extractChPosistion( string, 13) );
 console.log(  extractChPosistion( string) );
+
+// 4) Create a function to find the largest of three given integers.
+
+const largestOf3Integers = ( a, b, c) => {
+    
+        if ( parseInt( a ) === NaN || parseInt( b ) === NaN || parseInt( c ) === NaN )
+            return "A valid integer has to be introduced."
+        else if ( a >= b && a >= c)
+            return a
+        else if ( b >= a && b >= c)
+            return b
+        else if ( c >= b && c >= a)
+            return c
+        // else
+}
+
+console.log( largestOf3Integers( "a", 1, 2) );
+console.log( largestOf3Integers( 1, 2, 3) );
+console.log( largestOf3Integers( 3, 1, 2) );
+console.log( largestOf3Integers( 3, 4, 2) );
+console.log( largestOf3Integers( 3, 3, 3) );
+console.log( largestOf3Integers( -1, 3, 3) );
+console.log( largestOf3Integers( 0, 3, 3) );
+
