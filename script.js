@@ -163,7 +163,6 @@ console.log( addUPArrayOf3Numbers3([4,2,3]));
 console.log( addUPArrayOf3Numbers3([1,2,"three"]));
 
 // 9) Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
-console.log( "--------------------------------------------------------------------------------------------------------");
 
 const checkfor1an3IfInArray1 = arrayOfNumbers => {
     if(arrayOfNumbers.length === 2 
@@ -172,32 +171,73 @@ const checkfor1an3IfInArray1 = arrayOfNumbers => {
             || arrayOfNumbers[1] === 1
             || arrayOfNumbers[1] === 3    
             )) {
-
-        return "The array contains the numbers 1 and 3"
+                
+                return "The array contains the numbers 1 and 3"
     }
     else
-        return null
+    return null
 }
 
 
 const checkfor1an3IfInArray2 = arrayOfNumbers => { 
     let has_1_or_3 = null
     if( arrayOfNumbers.length === 2 )
+    arrayOfNumbers.forEach( elem => {
+        if (elem === 1 || elem === 3)
+        return has_1_or_3 = "The array contains the numbers 1 and 3"
+        else
+        return has_1_or_3
+        })
+        else
+        return has_1_or_3
+        
+        return has_1_or_3
+    }
+    console.log( checkfor1an3IfInArray2([1,3]));
+    console.log( checkfor1an3IfInArray2([1]));
+    console.log( checkfor1an3IfInArray2([3]));
+    console.log( checkfor1an3IfInArray2([1,2,3,4]));
+    console.log( checkfor1an3IfInArray2([2,3]));
+    console.log( checkfor1an3IfInArray2([1,"three"]));
+    
+    // 10) Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
+    console.log( "--------------------------------------------------------------------------------------------------------");
+    
+const checkfor1an3IfNOTinArray1 = arrayOfNumbers => {
+    if(arrayOfNumbers.length === 2 
+        && (arrayOfNumbers[0] !== 1 
+            && arrayOfNumbers[0] !== 3
+            && arrayOfNumbers[1] !== 1
+            && arrayOfNumbers[1] !== 3    
+            )) {
+
+        return "1 and 3 NOT in array"
+    }
+    else
+        return null
+}
+
+
+const checkfor1an3IfNOTinArray2 = arrayOfNumbers => { 
+    let has_1_or_3 = null
+    if( arrayOfNumbers.length === 2 ){
         arrayOfNumbers.forEach( elem => {
+            console.log(  );
             if (elem === 1 || elem === 3)
-                return has_1_or_3 = "The array contains the numbers 1 and 3"
-            else
                 return has_1_or_3
         })
+        has_1_or_3
+    }
     else
         return has_1_or_3
     
-    return has_1_or_3
+    return "the array has NO 1 or 3"
 }
-console.log( checkfor1an3IfInArray2([1,3]));
-console.log( checkfor1an3IfInArray2([1]));
-console.log( checkfor1an3IfInArray2([3]));
-console.log( checkfor1an3IfInArray2([1,2,3,4]));
-console.log( checkfor1an3IfInArray2([2,3]));
-console.log( checkfor1an3IfInArray2([1,"three"]));
+console.log( checkfor1an3IfNOTinArray1([1,3]));
+console.log( checkfor1an3IfNOTinArray1([1]));
+console.log( checkfor1an3IfNOTinArray1([3]));
+console.log( checkfor1an3IfNOTinArray1([1,2,3,4]));
+console.log( checkfor1an3IfNOTinArray1([2,3]));
+console.log( checkfor1an3IfNOTinArray1([2,4]));
+console.log( checkfor1an3IfNOTinArray1([1,"three"]));
 
