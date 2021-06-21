@@ -125,3 +125,39 @@ console.log( displayCityName("New York"));
 console.log( displayCityName("Dallas"));
 console.log( displayCityName("London"));
 console.log( displayCityName());
+
+// 8) Create a function to calculate the sum of three elements of a given array of integers of length 3.
+
+const addUPArrayOf3Numbers1 = arrayOfNumbers => {
+    if( arrayOfNumbers.length === 3 ) {
+        let sum = 0
+        for( let i of arrayOfNumbers)
+            if( Number(i) !== NaN)
+                sum += Number(i)
+        
+        return sum
+    }
+}
+const addUPArrayOf3Numbers2 = arrayOfNumbers => {
+    let arrLen = arrayOfNumbers.length
+    if( arrLen === 3 ) {
+        let sum = 0
+        for( let i=0; i < arrLen; i++ )
+        sum += Number(arrayOfNumbers[i])
+        
+        return sum
+    }
+}
+
+const addUPArrayOf3Numbers3 = arrayOfNumbers =>  
+    arrayOfNumbers.length === 3 
+        ? arrayOfNumbers.reduce( (sum, elem) => sum += Number(elem))
+        : undefined
+
+
+
+console.log( addUPArrayOf3Numbers3([1,2,3]));
+console.log( addUPArrayOf3Numbers3([1,2]));
+console.log( addUPArrayOf3Numbers3([1,2,3,4]));
+console.log( addUPArrayOf3Numbers3([4,2,3]));
+console.log( addUPArrayOf3Numbers3([1,2,"three"]));
